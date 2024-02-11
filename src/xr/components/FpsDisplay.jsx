@@ -9,7 +9,6 @@ export default function FpsDisplay () {
     const [show, setShow] = useState(false);
 
     useEffect(() => {
-        console.log(`fps: ${fps}`);
         setShow(true);
 
         const timeout = setTimeout(() => {
@@ -26,7 +25,7 @@ export default function FpsDisplay () {
     return (
         <HeadLinkObject>
             <Text 
-                position={[0, 0.0, -5]}
+                position={[0, 0, -5]}
                 outlineColor="black"
                 outlineOpacity={1}
                 outlineWidth={0.05}

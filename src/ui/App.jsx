@@ -9,7 +9,7 @@ function App() {
 
     return (
         <div className="h-screen flex flex-col items-center justify-center space-y-8">
-            <h1 className="text-4xl">VR Screen tester</h1>
+            <h1 className="text-4xl">VR screen tester</h1>
 
             <div className="mx-11 max-w-lg">
                 Click at any button bellow to start testing. Use left and right triggers to switch patterns. Use left and right grip to cycle through refresh rates. Press left menu button to exit.

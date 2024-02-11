@@ -19,6 +19,6 @@ module.exports = {
     ],
     'react/prop-types': 'off',
     'react-refresh/only-export-components': 'off',
-    "react/no-unknown-property": ["error", { "ignore": ["args", "attach"] }],
+    "react/no-unknown-property": ["error", { "ignore": ["args", "attach", "position"] }],
   },
 }
