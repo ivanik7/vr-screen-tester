@@ -12,14 +12,14 @@ function App() {
             <h1 className="text-4xl">VR screen tester</h1>
 
             <div className="mx-11 max-w-lg">
-                <p>Click at any button bellow to start testing.</p>
-                <p>Use left and right triggers to switch patterns.</p>
-                <p>Use left and right grip to cycle through refresh rates.</p>
-                <p>Press left menu button to exit.</p>
+                <p>Click any button bellow to start testing.</p>
+                <p>Press trigger to switch the pattern.</p>
+                <p>Press grip to change screen refresh rate.</p>
+                <p>Press menu button to exit.</p>
             </div>
 
             {!navigator.xr || !navigator.xr.isSessionSupported("immersive-vr") ? (
-                <div className="bg-red-100 p-4">Your browser does not support WebXR or no headset found. Open this page with builtin headset browser.</div>
+                <div className="bg-red-100 p-4">WebXR is not supported by this browser. Use built-in headset browser.</div>
             ) : (
                 <></>
             )}
