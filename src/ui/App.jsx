@@ -19,7 +19,7 @@ function App() {
             </div>
 
             {!navigator.xr || !navigator.xr.isSessionSupported("immersive-vr") ? (
-                <div className="bg-red-100 p-4">WebXR is not supported by this browser. Use built-in headset browser.</div>
+                <div className="bg-red-100 p-4">WebXR is not supported by this browser. Use headset built-in browser.</div>
             ) : (
                 <></>
             )}
