@@ -9,12 +9,14 @@ export default function XRApp() {
     const { state } = useStateContext();
 
     return (
-        <Canvas>
-            <XR frameRate={state.fps}>
-                <XRScene/>
-                <XRControl/>
-                <FpsDisplay/>
-            </XR>
-        </Canvas>
+        <div className="w-1 h-1 opacity-0">
+            <Canvas>
+                <XR frameRate={state.fps}>
+                    <XRScene/>
+                    <XRControl/>
+                    <FpsDisplay/>
+                </XR>
+            </Canvas>
+        </div>
     );
 }
