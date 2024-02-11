@@ -12,11 +12,11 @@ function App() {
             <h1 className="text-4xl">VR Screen tester</h1>
 
             <div className="mx-11 max-w-lg">
-                Click at any button bellow to start testing. Left and right triggers will switch mode. Press menu button to exit VR.
+                Click at any button bellow to start testing. Use left and right triggers to switch patterns. Use left and right grip to cycle through refresh rates. Press left menu button to exit.
             </div>
 
             {!navigator.xr ? <div className="bg-red-100">
-                Your browser does not support WebXR. Open this page in built headset browser.
+                Your browser does not support WebXR. Open this page with built headset browser.
             </div> : <></> }
 
             <div className="flex">
