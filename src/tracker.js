@@ -3,7 +3,7 @@ import Plausible from 'plausible-tracker'
 const plausible = Plausible({
   domain: 'vr.ivanik.ru',
   apiHost: 'https://plausible.ivanik.ru',
-  trackLocalhost: true
+  trackLocalhost: false
 });
 
 export function trackPageView(props) {
