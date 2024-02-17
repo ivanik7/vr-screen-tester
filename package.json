@@ -13,6 +13,7 @@
   "dependencies": {
     "@react-three/drei": "^9.97.4",
     "@react-three/xr": "^5.7.1",
+    "plausible-tracker": "^0.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite-plugin-mkcert": "^1.17.3"

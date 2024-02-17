@@ -3,9 +3,13 @@ import Link from "./components/Link";
 import ModeButton from "./components/ModeButton";
 import { PATTERN_SET, useStateContext } from "../context/StateContext";
 import { startSession } from "@react-three/xr";
+import {trackEvent} from "../tracker";
+import { useState } from "react";
 
 function App() {
     const { state, dispatch } = useStateContext();
+
+    const [error, setError] = useState(null);
 
     return (
         <div className="h-screen flex flex-col items-center justify-center space-y-8">
@@ -24,14 +28,29 @@ function App() {
                 <></>
             )}
 
+            {error ? (
+                <div className="bg-red-100 p-4">{error}</div>
+            ) : (
+                <></>
+            )}
+
             <div className="flex flex-wrap justify-center">
                 {patterns.map((pattern, index) => (
                     <ModeButton
                         key={pattern.name}
                         active={index === state.patternId}
-                        onClick={() => {
+                        onClick={async () => {
                             dispatch({ type: PATTERN_SET, payload: index });
-                            startSession("immersive-vr");
+
+                            try {
+                                await startSession("immersive-vr");
+                            } catch (error) {
+                                setError(error.message);
+
+                                trackEvent('enter-vr-error', {pattern: pattern.name, error: error.message})
+                            }
+
+                            trackEvent('enter-vr', {pattern: pattern.name})
                         }}
                     >
                         <pattern.button />
